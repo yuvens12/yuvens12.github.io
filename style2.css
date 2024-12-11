@@ -1,0 +1,126 @@
+@import url(https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600&display=swap);
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    border: none;
+    outline: none;
+    font-family: 'Poppins', sans-serif;
+}
+
+html {
+    font-size: 63%;
+}
+
+header {
+    margin-top: 20px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 1rem 9%;
+    background-color: transparent;
+    filter: drop-shadow(10px);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100;
+}
+
+.logo {
+    font-size: 3rem;
+    color: white;
+    font-weight: 800;
+    cursor: pointer;
+    transition: 0.5s ease;
+}
+
+.logo:hover {
+    transform: scale(1.1);
+    color: red;
+}
+
+nav a {
+    font-size: 1.8rem;
+    color: white;
+    margin-left: 4rem;
+    font-weight: 500;
+    transition: 0.3s ease;
+    border-bottom: 3px solid transparent;
+}
+
+nav a:hover,
+nav a.active {
+    color: red; /* Warna saat hover dan untuk tautan aktif */
+    border-bottom: 3px solid red; /* Garis bawah saat hover dan untuk tautan aktif */
+}
+
+body {
+    display: flex; /* Menggunakan Flexbox */
+    flex-wrap: wrap; /* Memungkinkan card untuk membungkus ke baris berikutnya */
+    justify-content: center; /* Pusat secara horizontal */
+    align-items: flex-start; /* Pusat secara vertikal di bagian atas */
+    height: 100vh; /* Mengisi tinggi viewport */
+    overflow-x: hidden;
+    background-color: black;
+    color: white;
+    padding-top: 160px; /* Menambahkan padding di bagian atas */
+}
+
+.card {
+    background-color: #1a1a1a; /* Warna latar belakang sesuai dengan tema gelap */
+    border-radius: 10px;
+    box-shadow: 0 4px 20px rgba(255, 255, 255, 0.1); /* Bayangan lebih lembut */
+    overflow: hidden;
+    width: 300px; /* Lebar card yang konsisten */
+    height: 500px; /* Tinggi card yang konsisten */
+    transition: transform 0.3s;
+    color: white; /* Warna teks putih */
+    margin: 2.5rem; /* Jarak antara card */
+    display: flex; /* Menggunakan flexbox untuk konten */
+    flex-direction: column; /* Mengatur arah konten dalam card */
+    align-items: center; /* Pusatkan konten di dalam card */
+}
+
+.card:hover {
+    transform: scale(1.05);
+}
+
+.card-image {
+    width: 100%; /* Gambar mengisi lebar card */
+    height: 300px; /* Tinggi gambar yang konsisten */
+    object-fit: cover; /* Memastikan gambar terpotong dengan baik */
+}
+
+.card-content {
+    padding: 20px;
+    flex-grow: 1; /* Memungkinkan konten untuk mengisi ruang yang tersisa */
+}
+
+.card-title {
+    font-size: 2rem; /* Menggunakan ukuran yang lebih besar untuk konsistensi */
+    margin: 0 0 10px;
+    color: white; /* Warna judul putih */
+}
+
+.card-description {
+    font-size: 1.2rem; /* Ukuran font yang lebih besar untuk deskripsi */
+    margin-bottom: 20px;
+    color: #d1d1d1; /* Warna deskripsi lebih lembut */
+}
+
+.card-button {
+    display: inline-block;
+    padding: 10px 15px;
+    background-color: red; /* Menggunakan warna merah sesuai tema */
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.card-button:hover {
+    background-color: darkred; /* Warna saat hover */
+}
